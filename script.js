@@ -9,11 +9,7 @@ formulario.addEventListener('submit', (event) => {
   const email = document.getElementById('email').value.trim();
   const mensagem = document.getElementById('mensagem').value.trim();
 
-  resultadoFormulario.innerHTML = `
-    <strong>Nome:</strong> ${nome}<br>
-    <strong>Email:</strong> ${email}<br>
-    <strong>Mensagem:</strong> ${mensagem}
-  `;
+  resultadoFormulario.textContent = `Nome: ${nome} | Email: ${email} | Mensagem: ${mensagem}`;
 
   formulario.reset();
 });
@@ -35,13 +31,20 @@ adicionarPauta.addEventListener('click', () => {
 
   contador += 1;
   const linha = document.createElement('tr');
+  const colunaNumero = document.createElement('td');
+  const colunaTema = document.createElement('td');
+  const colunaResponsavel = document.createElement('td');
+  const colunaStatus = document.createElement('td');
 
-  linha.innerHTML = `
-    <td>${contador}</td>
-    <td>${tema}</td>
-    <td>${responsavel}</td>
-    <td>${status}</td>
-  `;
+  colunaNumero.textContent = String(contador);
+  colunaTema.textContent = tema;
+  colunaResponsavel.textContent = responsavel;
+  colunaStatus.textContent = status;
+
+  linha.appendChild(colunaNumero);
+  linha.appendChild(colunaTema);
+  linha.appendChild(colunaResponsavel);
+  linha.appendChild(colunaStatus);
 
   corpoTabelaPauta.appendChild(linha);
 
