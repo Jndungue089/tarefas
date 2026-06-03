@@ -3,132 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarefas T1, T2 e T3</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.4; }
-    section { margin-bottom: 28px; }
-    h1, h2 { margin-bottom: 8px; }
-    form, .bloco { max-width: 700px; }
-    input, button, textarea, select { margin: 4px 0; padding: 6px; }
-    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
-    th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
-    .linha { display: flex; gap: 8px; flex-wrap: wrap; }
-    .resultado { background: #f5f5f5; padding: 10px; border: 1px solid #ddd; }
-    .small { color: #666; font-size: 0.92rem; }
-    .cabecalho-pauta p { margin: 4px 0; }
-  </style>
+  <title>Home - Tarefas</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Tarefas (T1, T2 e T3)</h1>
-
-  <section id="t1">
-    <h2>T1 - Formulário em HTML</h2>
-    <form id="formularioContato">
-      <div>
-        <label for="nome">Nome</label><br />
-        <input id="nome" name="nome" type="text" required />
-      </div>
-      <div>
-        <label for="email">Email</label><br />
-        <input id="email" name="email" type="email" required />
-      </div>
-      <div>
-        <label for="mensagem">Mensagem</label><br />
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
-
-    <p class="small">Último envio:</p>
-    <div id="resultadoFormulario" class="resultado">Nenhum envio ainda.</div>
+  <h1>Home - Tarefas</h1>
+  <section class="bloco">
+    <p class="small">Selecione uma tarefa para abrir a página correspondente:</p>
+    <nav class="menu-home">
+      <a href="t1.html">Ir para T1 - Formulário em HTML</a>
+      <a href="t2.html">Ir para T2 - Mini pauta</a>
+      <a href="t3.html">Ir para T3 - Manipulação com JavaScript</a>
+    </nav>
   </section>
-
-  <section id="t2">
-    <h2>T2 - Mini pauta</h2>
-    <div class="bloco">
-      <div class="cabecalho-pauta">
-        <p><strong>Turma:</strong> ANI</p>
-        <p><strong>Período:</strong> Pós-laboral</p>
-        <p><strong>Classe:</strong> 13ª</p>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Disciplina</th>
-            <th>1º Teste</th>
-            <th>2º Teste</th>
-            <th>Média</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>SI - Sistema de Informação</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Matemática</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>IAG - Informática Aplicada à Gestão</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>TLP - Tecnologias de Linguagem de Programação</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>PT - Projeto Tecnológico</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Empreendedorismo</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section id="t3">
-    <h2>T3 - Manipulação com JavaScript</h2>
-    <div class="bloco">
-      <input id="textoOriginal" type="text" placeholder="Digite um texto" />
-      <div class="linha">
-        <button type="button" id="btnMaiusculas">Maiúsculas</button>
-        <button type="button" id="btnMinusculas">Minúsculas</button>
-        <button type="button" id="btnInverter">Inverter</button>
-        <button type="button" id="btnLimpar">Limpar</button>
-      </div>
-      <p class="small">Resultado:</p>
-      <div id="resultadoTexto" class="resultado">---</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Outras tarefas</h2>
-    <p class="small">As outras tarefas foram deixadas sem preenchimento, conforme solicitado.</p>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
