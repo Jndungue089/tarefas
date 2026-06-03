@@ -8,9 +8,11 @@ if (formulario && resultadoFormulario) {
 
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
+    const bi = document.getElementById('bi').value.trim();
+    const numeroEstudante = document.getElementById('numeroEstudante').value.trim();
     const mensagem = document.getElementById('mensagem').value.trim();
 
-    resultadoFormulario.textContent = `Nome: ${nome} | Email: ${email} | Mensagem: ${mensagem}`;
+    resultadoFormulario.textContent = `Nome: ${nome} | Email: ${email} | BI: ${bi} | Nº Estudante: ${numeroEstudante} | Mensagem: ${mensagem}`;
 
     formulario.reset();
   });
