@@ -14,45 +14,6 @@ formulario.addEventListener('submit', (event) => {
   formulario.reset();
 });
 
-// T2 - Mini pauta
-const adicionarPauta = document.getElementById('adicionarPauta');
-const corpoTabelaPauta = document.getElementById('corpoTabelaPauta');
-let contador = 0;
-
-adicionarPauta.addEventListener('click', () => {
-  const tema = document.getElementById('tema').value.trim();
-  const responsavel = document.getElementById('responsavel').value.trim();
-  const status = document.getElementById('status').value;
-
-  if (!tema || !responsavel) {
-    alert('Preencha tema e responsável para adicionar a mini pauta.');
-    return;
-  }
-
-  contador += 1;
-  const linha = document.createElement('tr');
-  const colunaNumero = document.createElement('td');
-  const colunaTema = document.createElement('td');
-  const colunaResponsavel = document.createElement('td');
-  const colunaStatus = document.createElement('td');
-
-  colunaNumero.textContent = String(contador);
-  colunaTema.textContent = tema;
-  colunaResponsavel.textContent = responsavel;
-  colunaStatus.textContent = status;
-
-  linha.appendChild(colunaNumero);
-  linha.appendChild(colunaTema);
-  linha.appendChild(colunaResponsavel);
-  linha.appendChild(colunaStatus);
-
-  corpoTabelaPauta.appendChild(linha);
-
-  document.getElementById('tema').value = '';
-  document.getElementById('responsavel').value = '';
-  document.getElementById('status').value = 'Pendente';
-});
-
 // T3 - Manipulação de texto
 const textoOriginal = document.getElementById('textoOriginal');
 const resultadoTexto = document.getElementById('resultadoTexto');
